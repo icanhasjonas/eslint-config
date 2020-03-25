@@ -1,0 +1,109 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "plugins": ["@typescript-eslint", "import", "react"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "prettier/@typescript-eslint"
+  ],
+  "rules": {
+    "semi": ["error", "never"],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "no-useless-escape": "error",
+    "indent": [
+      "error",
+      "tab",
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+    "@typescript-eslint/camelcase": [
+      "warn",
+      {
+        "properties": "never",
+        "ignoreDestructuring": true,
+        "ignoreImports": true
+      }
+    ],
+    "@typescript-eslint/interface-name-prefix": "off",
+    "camelcase": [
+      "warn",
+      {
+        "properties": "never",
+        "ignoreDestructuring": true,
+        "ignoreImports": true
+      }
+    ],
+    "arrow-parens": "off",
+    "import/named": "warn",
+    "import/namespace": "warn",
+    "import/default": "error",
+    "import/no-default-export": "warn",
+    "sort-imports": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", ["sibling", "parent"], "index"],
+        "pathGroupsExcludedImportTypes": [],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          }
+        ],
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ],
+    "jsx-quotes": ["error"],
+    "quote-props": ["warn", "as-needed"],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "yoda": "warn",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "only-multiline",
+        "objects": "only-multiline",
+        "imports": "never",
+        "exports": "never",
+        "functions": "never"
+      }
+    ],
+    "no-empty-interface": "off",
+    "no-dupe-args": "warn",
+    "new-parens": "error",
+    "no-empty": "off",
+    "no-bitwise": "warn",
+    "no-console": [
+      "warn",
+      {
+        "allow": ["debug", "info", "log", "time", "timeEnd", "trace"]
+      }
+    ],
+    "react/display-name": "off"
+  }
+}
