@@ -10,7 +10,7 @@
       "version": "detect"
     }
   },
-  "plugins": ["@typescript-eslint", "import", "react"],
+  "plugins": ["@typescript-eslint", "import", "react", "prettier"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
